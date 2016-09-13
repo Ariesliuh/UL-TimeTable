@@ -3,5 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    module_id = request.GET['Module']
-    return HttpResponse('Module ID:'+str(module_id))
+    course_id = request.GET['id']
+    return HttpResponse('Module ID:'+str(course_id))
