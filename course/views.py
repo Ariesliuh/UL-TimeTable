@@ -22,11 +22,12 @@ subcontents = ''
 ########################################
 def index(request):
     global course_id,course
-    file = open ('test.txt', 'w')
-    file.write('test')
+    course_id = str(request.GET['id'])
+    course = Course(course_id)
+    file = open(course_id+".ics","w")
+   
+    file.write('content')
     file.close()
-    
-    
     return HttpResponse('Course ID:'+course_id)
 
 def week_range(wks):
