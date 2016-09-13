@@ -1,8 +1,2 @@
-__init__.pyc
-views.pyc
-settings.pyc
-urls.pyc
-wsgi.pyc
-admin.pyc
-models.pyc
-.ics
+*.pyc
+*.ics

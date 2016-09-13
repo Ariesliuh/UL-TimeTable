@@ -25,7 +25,17 @@ def index(request):
     course_id = str(request.GET['id'])
     course = Course(course_id)
     file = open(course_id+".ics","w")
-   
+    events()
+    content = '''BEGIN:VCALENDAR
+METHOD:PUBLISH
+VERSION:2.0
+X-WR-CALNAME:'''+course_id+'''
+PRODID:-//Apple Inc.//Mac OS X 10.11.4//EN
+CALSCALE:GREGORIAN
+X-WR-TIMEZONE:Europe/Dublin
+'''+subcontents+'''
+END:VCALENDAR
+'''
     file.write('content')
     file.close()
     return HttpResponse('Course ID:'+course_id)

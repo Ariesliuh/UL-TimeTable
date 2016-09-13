@@ -38,7 +38,6 @@ class CourseParser(HTMLParser):
 
 class Course():
     def __init__(self, course_id):#LM039 LM634
-        print 'course course id:'+course_id
         data = {'T1' : course_id, 'T2' : '1'}
         post = urllib2.urlopen(
             url = 'http://timetable.ul.ie/course_res.asp',
